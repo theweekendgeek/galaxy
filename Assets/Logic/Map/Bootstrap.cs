@@ -66,11 +66,8 @@ public class Bootstrap : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            Time.timeScale = paused ? 1 :  0;
-            paused = !paused;
-
-        }
+        if (!Input.GetKeyDown("space")) return;
+        Time.timeScale = paused ? 1 :  0;
+        paused = !paused;
     }
 }
